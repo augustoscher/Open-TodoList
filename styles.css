@@ -1,24 +1,37 @@
-body{
-    background: #000000;
-  }
-  .container{
-    max-width: 500px;
-  }
-  input[type=text],
-  input[type=text]:focus{
-    color: rgb(0, 0, 0);
-    border: none;
-    background: rgba(255, 255, 255, 0.9);
-    max-width: 500px;
-  }
-  .todos li{
-    background: rgba(255, 255, 255, 0.7);
-    color: rgb(0, 0, 0);
-    font-weight: 450;
-  }
-  .delete{
-    cursor: pointer;
-  }
-  .filtered {
-    display: none !important;
-  }
+body {
+  background: linear-gradient(to right, #556270, #ff6b6b);
+}
+.container {
+  max-width: 500px;
+}
+
+input[type="text"],
+input[type="text"]:focus {
+  color: rgb(0, 0, 0);
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+  border-radius: 12px;
+}
+
+.container .list-group li {
+  border-radius: 18px;
+  margin-bottom: 12px;
+}
+
+.todos li {
+  background: #fb8687;
+  color: rgb(0, 0, 0);
+  font-weight: 450;
+}
+.todos li span, i {
+  color: #202020;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.filtered {
+  display: none !important;
+}
