@@ -31,16 +31,24 @@ todoList.addEventListener('click', e => {
         e.target.parentElement.remove();
     }
 });
+
+const match = (todo, query) =>
+    todo.trim().toLowerCase().includes(query.toLowerCase())
+
 const filterTodos = e => {
+    if (!e || e.length === 0) {
+      Array.from(todoList.children)
+      .forEach((todo) => todo.classList.remove('filtered'));
+      return;
+    }
 
     Array.from(todoList.children)
-    .filter((todo) =>!todo.textContent.includes(e))
+    .filter((todo) =>!match(todo.textContent, e))
     .forEach((todo) => todo.classList.add('filtered'));
-
+  
     Array.from(todoList.children)
-    .filter((todo) => todo.textContent.includes(e))
+    .filter((todo) => match(todo.textContent, e))
     .forEach((todo) => todo.classList.remove('filtered'));
-
 };
 
 //for live searching and filtering
